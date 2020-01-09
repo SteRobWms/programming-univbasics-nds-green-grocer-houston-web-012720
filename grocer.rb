@@ -30,7 +30,7 @@ end
 cart1 = [
   {:item => "AVOCADO", :price => 3.00, :clearance => true },
   {:item => "AVOCADO", :price => 3.00, :clearance => true },
-  {:item => "KALE", :price => 3.00, :clearance => false}
+  {:item => "KALE", :price => 2.00, :clearance => false}
 ]
 
 def consolidate_cart(cart)
