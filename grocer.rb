@@ -31,7 +31,7 @@ def consolidate_cart(cart)
   cart_consolidated = []
   i = 0
   while i < cart.length do
-    
+
     i += 1
   end
   cart_consolidated
