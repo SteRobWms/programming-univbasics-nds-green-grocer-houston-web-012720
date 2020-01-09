@@ -38,8 +38,8 @@ def consolidate_cart(cart)
   i = 0
   old_item = cart[i]
   while i < cart.length do
-    new_item = cart_consolidated[k]
     k = 0
+    new_item = cart_consolidated[k]
     while k < cart_consolidated do
       if old_item[:item] == new_item[:item]
         new_item[:count] += 1
