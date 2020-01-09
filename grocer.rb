@@ -17,20 +17,19 @@ def add_count_to_item(item_info)
   }
 
 def consolidate_cart(cart)
-  cart_consolidated = []
-  index = 0
-  while index < cart.length do
-    mindex = 0
-    orig_cart_item = cart[index][:item]
-    new_cart_item = cart_consolidated[mindex][:item]
-    if orig_cart_item == new_cart_item && mindex < cart_consolidated.length
-      new_cart_item[:count] += 1
-      mindex += 1
-    else
-      add_count_to_item(orig_cart_item)
-    end
-    index += 1
+  cart_consolidated = [add_count_to_item(cart[0])]
+  i = 0
+  while i < cart.length do
+    k = 0
+    if k < cart_consolidated.length
+      if cart[i][:item] == cart_consolidated[k][:item]
+        cart_consolidated[k][:count] += 1
+      else
+        k += 1
+    else cart_consolidated << add_count_to_item(index)
+    i += 1
   end
+  cart_consolidated
   # Consult README for inputs and outputs
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
