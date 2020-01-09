@@ -27,12 +27,7 @@ def consolidate_cart(cart)
       new_cart_item[:count] += 1
       mindex += 1
     else
-      cart_consolidated[index] = {
-        item: orig_cart_item[:item],
-        price: orig_cart_item[:price],
-        clearance: orig_cart_item[:clearance],
-        count: 1
-      }
+      add_count_to_item(orig_cart_item)
     end
     index += 1
   end
