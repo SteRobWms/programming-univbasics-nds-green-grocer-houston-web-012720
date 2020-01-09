@@ -1,3 +1,10 @@
+# test data sets
+cart1 = [
+  {:item => "AVOCADO", :price => 3.00, :clearance => true },
+  {:item => "AVOCADO", :price => 3.00, :clearance => true },
+  {:item => "KALE", :price => 2.00, :clearance => false}
+]
+
 def find_item_by_name_in_collection(name, collection)
   index = 0
   while index < collection.length do
@@ -8,6 +15,7 @@ def find_item_by_name_in_collection(name, collection)
   end
 end
 
+# Duplicate find_item_by_name_in_collection with shorter method name. Annoying to type.
 def fibnic(name, collection)
   index = 0
   while index < collection.length do
@@ -27,18 +35,13 @@ def add_count_to_item(item_info)
   }
 end
 
-cart1 = [
-  {:item => "AVOCADO", :price => 3.00, :clearance => true },
-  {:item => "AVOCADO", :price => 3.00, :clearance => true },
-  {:item => "KALE", :price => 2.00, :clearance => false}
-]
-
 def consolidate_cart(cart)
   cart_consolidated = [add_count_to_item(cart[0])]
   i = 1
   while i < cart.length do
     k = 0
     old_item = cart[i]
+    # Doesn't work
     # if cart[i][:item] == cart_consolidated[k][:item]
     #   cart_consolidated[k][:count] += 1
     # elsif cart_consolidated[k] = nil || cart_consolidated[k+1] = nil
