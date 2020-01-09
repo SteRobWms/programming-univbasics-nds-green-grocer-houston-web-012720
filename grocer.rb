@@ -53,7 +53,10 @@ def consolidate_cart(cart)
     end
     i += 1
   end
-  cart_consolidated
+  if cart[0] == true
+    cart_consolidated
+  else
+    print "Your cart is empty!"
   # Consult README for inputs and outputs
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
