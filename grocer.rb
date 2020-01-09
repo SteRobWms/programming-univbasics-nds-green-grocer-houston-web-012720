@@ -30,8 +30,12 @@ end
 def consolidate_cart(cart)
   cart_consolidated = []
   i = 0
+  old_item = cart[i]
   while i < cart.length do
-
+    if fibnic(old_item[:item],cart_consolidated)
+      fibnic(old_item[:item],cart_consolidated)[:count] += 1
+    else
+      cart_consolidated << add_count_to_item(old_item)
     i += 1
   end
   cart_consolidated
