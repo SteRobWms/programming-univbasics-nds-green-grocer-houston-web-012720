@@ -36,16 +36,13 @@ cart1 = [
 def consolidate_cart(cart)
   cart_consolidated = []
   i = 0
-  old_item = cart[i]
   while i < cart.length do
     k = 0
-    new_item = cart_consolidated[k]
-    while k < cart_consolidated.length do
-      if old_item[:item] == new_item[:item]
-        new_item[:count] += 1
-      else
-        cart_consolidated << add_count_to_item(old_item)
-      end
+    if cart[i][:item] == cart_consolidated[k][:item]
+      cart_consolidated[k][:count] += 1
+    elsif cart_consolidated[k] = nil || cart_consolidated[k+1] = nil
+      cart_consolidated << add_count_to_item(cart[i])
+    else
       k += 1
     end
     # if fibnic(old_item[:item],cart_consolidated)
