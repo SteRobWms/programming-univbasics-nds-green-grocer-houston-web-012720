@@ -38,7 +38,7 @@ def consolidate_cart(cart)
   i = 0
   while i < cart.length do
     k = 0
-    if cart[i][:item] == cart_consolidated[k][:item]
+    if cart[i][:item] = cart_consolidated[k][:item]
       cart_consolidated[k][:count] += 1
     elsif cart_consolidated[k] = nil || cart_consolidated[k+1] = nil
       cart_consolidated << add_count_to_item(cart[i])
