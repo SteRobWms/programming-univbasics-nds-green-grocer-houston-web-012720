@@ -15,6 +15,7 @@ def add_count_to_item(item_info)
     :clearance => item_info[:clearance],
     :count => 1
   }
+end
 
 def consolidate_cart(cart)
   cart_consolidated = []
