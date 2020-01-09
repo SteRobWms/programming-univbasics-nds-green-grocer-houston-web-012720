@@ -8,6 +8,14 @@ def find_item_by_name_in_collection(name, collection)
   end
 end
 
+def add_count_to_item(item_info)
+  {
+    :item => item_info[:item],
+    :price => item_info[:price],
+    :clearance => item_info[:clearance],
+    :count => 1
+  }
+  
 def consolidate_cart(cart)
   cart_consolidated = []
   index = 0
