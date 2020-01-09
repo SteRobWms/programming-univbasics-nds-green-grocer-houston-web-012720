@@ -38,11 +38,21 @@ def consolidate_cart(cart)
   i = 0
   old_item = cart[i]
   while i < cart.length do
-    if fibnic(old_item[:item],cart_consolidated)
-      fibnic(old_item[:item],cart_consolidated)[:count] += 1
-    else
-      cart_consolidated << add_count_to_item(old_item)
+    new_item = cart_consolidated[k]
+    k = 0
+    while k < cart_consolidated do
+      if old_item[:item] == new_item[:item]
+        new_item[:count] += 1
+      else
+        cart_consolidated << add_count_to_item(old_item)
+      end
+      k += 1
     end
+    # if fibnic(old_item[:item],cart_consolidated)
+    #   fibnic(old_item[:item],cart_consolidated)[:count] += 1
+    # else
+    #   cart_consolidated << add_count_to_item(old_item)
+    # end
     i += 1
   end
   pp cart_consolidated
