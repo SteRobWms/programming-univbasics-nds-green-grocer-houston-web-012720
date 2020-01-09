@@ -21,8 +21,8 @@ def consolidate_cart(cart)
   old_cart_item = cart[i][:item]
   i = 0
   while i < cart.length do
-    if find_item_by_name_in_collection(old_cart_item,cart_consolidated)
-      find_item_by_name_in_collection(old_cart_item,cart_consolidated)[:count] += 1
+    if find_item_by_name_in_collection(cart[i][:item], cart_consolidated)
+      find_item_by_name_in_collection(cart[i][:item], cart_consolidated)[:count] += 1
     else
       cart_consolidated << add_count_to_item(cart[i])
     end
