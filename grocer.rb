@@ -45,11 +45,12 @@ def consolidate_cart(cart)
     end
     i += 1
   end
-  cart_consolidated
+  pp cart_consolidated
   # Consult README for inputs and outputs
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
 end
+consolidate_cart(cart1)
 
 def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
