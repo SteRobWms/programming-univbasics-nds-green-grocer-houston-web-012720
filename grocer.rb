@@ -8,6 +8,16 @@ def find_item_by_name_in_collection(name, collection)
   end
 end
 
+def fibnic(name, collection)
+  index = 0
+  while index < collection.length do
+    if collection[index][:item] == name
+      return collection[index]
+    else index += 1
+    end
+  end
+end
+
 def add_count_to_item(item_info)
   {
     :item => item_info[:item],
@@ -21,14 +31,7 @@ def consolidate_cart(cart)
   cart_consolidated = []
   i = 0
   while i < cart.length do
-    k = 0
-    while k < cart_consolidated.length do
-      if cart_consolidated[k][:item] == cart[i][:item]
-        cart_consolidated[k][:count] += 1
-      else
-        k +=1
-      end
-    end
+    
     i += 1
   end
   cart_consolidated
