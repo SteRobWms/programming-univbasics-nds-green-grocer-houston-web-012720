@@ -19,7 +19,6 @@ end
 
 def consolidate_cart(cart)
   cart_consolidated = []
-  old_cart_item = cart[i][:item]
   i = 0
   while i < cart.length do
     if find_item_by_name_in_collection(cart[i][:item], cart_consolidated)
