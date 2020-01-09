@@ -53,7 +53,7 @@ def consolidate_cart(cart)
     end
     i += 1
   end
-  if cart[0] == true
+  if cart[0] != nil
     cart_consolidated
   else
     print "Your cart is empty!"
