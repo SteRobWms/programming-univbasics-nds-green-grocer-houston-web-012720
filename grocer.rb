@@ -15,7 +15,7 @@ def consolidate_cart(cart)
     mindex = 0
     orig_cart_item = cart[index][:item]
     new_cart_item = cart_consolidated[mindex][:item]
-    if orig_cart_item !== new_cart_item && mindex < cart_consolidated.length
+    if orig_cart_item != new_cart_item && mindex < cart_consolidated.length
       new_cart_item[:count] += 1
       mindex += 1
     else
