@@ -27,6 +27,12 @@ def add_count_to_item(item_info)
   }
 end
 
+cart1 = [
+  {:item => "AVOCADO", :price => 3.00, :clearance => true },
+  {:item => "AVOCADO", :price => 3.00, :clearance => true },
+  {:item => "KALE", :price => 3.00, :clearance => false}
+]
+
 def consolidate_cart(cart)
   cart_consolidated = []
   i = 0
