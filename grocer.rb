@@ -17,7 +17,7 @@ def add_count_to_item(item_info)
   }
 
 def consolidate_cart(cart)
-  cart_consolidated = [add_count_to_item(cart[0])]
+  cart_consolidated = []
   i = 0
   while i < cart.length do
     k = 0
