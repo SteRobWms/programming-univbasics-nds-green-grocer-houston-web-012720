@@ -15,17 +15,6 @@ def find_item_by_name_in_collection(name, collection)
   end
 end
 
-# Duplicate find_item_by_name_in_collection with shorter method name. Annoying to type.
-def fibnic(name, collection)
-  index = 0
-  while index < collection.length do
-    if collection[index][:item] == name
-      return collection[index]
-    else index += 1
-    end
-  end
-end
-
 def add_count_to_item(item_info)
   {
     :item => item_info[:item],
