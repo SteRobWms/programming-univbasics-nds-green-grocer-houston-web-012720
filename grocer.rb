@@ -61,11 +61,8 @@ def consolidate_cart(cart)
   else
     print "Your cart is empty!"
   end
-  # Consult README for inputs and outputs
-  # REMEMBER: This returns a new Array that represents the cart. Don't merely
-  # change `cart` (i.e. mutate) it. It's easier to return a new thing.
 end
-consolidate_cart(cart1)
+# consolidate_cart(cart1)
 
 def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
