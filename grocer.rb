@@ -49,8 +49,8 @@ def consolidate_cart(cart)
     # else
     #   k += 1
     # end
-    if fibnic(old_item[:item],cart_consolidated)
-      fibnic(old_item[:item],cart_consolidated)[:count] += 1
+    if find_item_by_name_in_collection(old_item[:item],cart_consolidated)
+      find_item_by_name_in_collection(old_item[:item],cart_consolidated)[:count] += 1
     else
       cart_consolidated << add_count_to_item(old_item)
     end
@@ -65,6 +65,8 @@ end
 # consolidate_cart(cart1)
 
 def apply_coupons(cart, coupons)
+  index = 0
+  find_item_by_name_in_collection
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
