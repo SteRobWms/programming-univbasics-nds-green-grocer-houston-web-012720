@@ -35,7 +35,7 @@ cart1 = [
 
 def consolidate_cart(cart)
   cart_consolidated = [add_count_to_item(cart[0])]
-  i = 0
+  i = 1
   while i < cart.length do
     k = 0
     if cart[i][:item] == cart_consolidated[k][:item]
